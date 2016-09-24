@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
+var flightReq = require('./flight.js');
 
 var terminalSchema = new mongoose.Schema({
 	name: String,
-	flights: [flightSchema],
+	flights: [flightReq],
 	capacity: Number
 });
 
-var Terminal = mongoose.model('Airport', terminalSchema);
+var Terminal = mongoose.model('Terminal', terminalSchema);
 
-module.exports = Terminal;
+exports = Terminal.Schema;

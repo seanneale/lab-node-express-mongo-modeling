@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
+var terminalReq = require('./terminal.js');
 
 var airportSchema = new mongoose.Schema({
 	name: String,
 	country: String,
-	terminals: [terminalSchema],
+	terminals: [terminalReq],
 	opened: Date
 });
 
 var Airport = mongoose.model('Airport', airportSchema);
 
-module.exports = Airport;
+exports = Airport.Schema;

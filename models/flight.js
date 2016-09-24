@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
+var passengerReq = require('./passenger.js');
 
 var flightSchema = new mongoose.Schema({
 	from: String,
 	to: String,
 	airline: String,
-	passengers: [passengerSchema]
+	passengers: [passengerReq]
 });
 
 var Flight = mongoose.model('Flight', flightSchema);
 
-module.exports = Flight;
+exports = Flight.Schema;

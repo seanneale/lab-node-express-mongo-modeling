@@ -8,4 +8,4 @@ var passengerSchema = new mongoose.Schema({
 
 var Passenger = mongoose.model('Passenger', passengerSchema);
 
-module.exports = Passenger;
+exports = Passenger.Schema;
