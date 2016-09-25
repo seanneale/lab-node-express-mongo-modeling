@@ -4,10 +4,12 @@ var terminalReq = require('./terminal.js');
 var airportSchema = new mongoose.Schema({
 	name: String,
 	country: String,
-	terminals: [terminalReq],
+	terminals: ['Terminal'],
 	opened: Date
+},{
+	timestamps: true
 });
 
 var Airport = mongoose.model('Airport', airportSchema);
 
-exports = Airport.Schema;
+module.exports = Airport;

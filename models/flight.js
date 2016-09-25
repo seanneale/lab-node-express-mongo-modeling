@@ -5,9 +5,12 @@ var flightSchema = new mongoose.Schema({
 	from: String,
 	to: String,
 	airline: String,
-	passengers: [passengerReq]
+	passengers: ['Passenger']
+},{
+	timestamps: true
 });
 
 var Flight = mongoose.model('Flight', flightSchema);
 
-exports = Flight.Schema;
+//exports.Schema = flightSchema;
+module.exports = Flight;
