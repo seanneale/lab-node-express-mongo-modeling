@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-var flightReq = require('./flight.js').Schema;
+var flightReq = require('./flight.js');
 
 var terminalSchema = new mongoose.Schema({
 	name: String,
